@@ -1,5 +1,16 @@
-// Simulación de datos de productos
+// script.js
 document.addEventListener('DOMContentLoaded', function () {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (!isLoggedIn) {
+        // Si no está autenticado, redirige a la página de inicio de sesión
+        window.location.href = 'login.html';
+    } else {
+        // Si está autenticado, carga el inventario
+        cargarProductos();
+    }
+});
+
+function cargarProductos() {
     const productos = [
         { id: 1, codigo: "1001", nombre: "Producto 1", cantidad: 10, cantidad_maxima: 20, estado: "Disponible" },
         { id: 2, codigo: "1002", nombre: "Producto 2", cantidad: 5, cantidad_maxima: 15, estado: "Por rellenar" },
@@ -20,10 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
         listaProductos.appendChild(tr);
     });
-});
+};
 
 // Función de simulación de inicio de sesión
 function login() {
-    // Redirige a index.html después del "inicio de sesión"
+    // Aquí iría la lógica de autenticación
+    // Por ejemplo, verificar el usuario y la contraseña
+    // Si son válidos, redirige a index.html
+    localStorage.setItem('isLoggedIn', true);
     window.location.href = 'index.html';
 }
