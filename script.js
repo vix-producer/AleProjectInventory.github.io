@@ -33,11 +33,13 @@ function cargarProductos() {
     });
 };
 
-// Función de simulación de inicio de sesión
+// script.js
 function login() {
+    const usuario = document.getElementById('usuario').value;
+    const contraseña = document.getElementById('contraseña').value;
+
     // Aquí iría la lógica de autenticación
     // Por ejemplo, verificar el usuario y la contraseña
-    // Si son válidos, redirige a index.html
-    localStorage.setItem('isLoggedIn', true);
-    window.location.href = 'index.html';
+    // Si son válidos, redirige a otra página
+    window.location.href = 'index.html'; // Cambiar a la página deseada después del inicio de sesión
 }
