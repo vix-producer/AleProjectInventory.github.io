@@ -23,7 +23,7 @@
                 <div class="card">
                     <div class="card-header">Iniciar sesión</div>
                     <div class="card-body">
-                        <form onsubmit="event.preventDefault(); login();">
+                        <form>
                             <div class="form-group">
                                 <label for="usuario">Usuario:</label>
                                 <input type="text" class="form-control" id="usuario" required>
@@ -32,7 +32,7 @@
                                 <label for="contraseña">Contraseña:</label>
                                 <input type="password" class="form-control" id="contraseña" required>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="login()">Iniciar sesión</button>
                         </form>
                     </div>
                 </div>
