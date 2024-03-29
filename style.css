@@ -41,12 +41,25 @@
 .table td {
     vertical-align: middle;
 }
-/* styles.css */
 body {
     background-image: url('https://www.managebac.com/wp-content/uploads/2023/01/Lincoln-School-Hero-scaled.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    height: 100vh;
+}
+
+.login-row {
+    height: 100%;
+}
+
+.login-col {
     display: flex;
     justify-content: center;
     align-items: center;

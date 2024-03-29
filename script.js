@@ -38,8 +38,12 @@ function login() {
     const usuario = document.getElementById('usuario').value;
     const contraseña = document.getElementById('contraseña').value;
 
-    // Aquí iría la lógica de autenticación
-    // Por ejemplo, verificar el usuario y la contraseña
-    // Si son válidos, redirige a otra página
-    window.location.href = 'index.html'; // Cambiar a la página deseada después del inicio de sesión
+    // Verificar las credenciales del usuario
+    if (usuario === 'ale' && contraseña === '142536') {
+        // Credenciales válidas, redirigir a otra página (en este caso, index.html)
+        window.location.href = 'index.html';
+    } else {
+        // Credenciales inválidas, mostrar mensaje de error
+        alert('Usuario o contraseña incorrectos');
+    }
 }
