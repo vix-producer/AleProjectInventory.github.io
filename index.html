@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadatos de la página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
-    <!-- Enlace al archivo CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!-- Contenedor principal de la página -->
     <div class="container mt-5">
-        <!-- Encabezado del inventario -->
         <h2 class="mb-4">Inventario</h2>
-        <!-- Tabla que muestra la lista de productos -->
         <table class="table">
-            <!-- Encabezados de la tabla -->
             <thead>
                 <tr>
                     <th>ID</th>
@@ -24,54 +18,13 @@
                     <th>Cantidad</th>
                     <th>Cantidad Máxima</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
                 </tr>
             </thead>
-            <!-- Cuerpo de la tabla -->
-            <tbody>
-                {% for producto in productos %}
-                <tr>
-                    <!-- ID del producto -->
-                    <td>{{ producto.id }}</td>
-                    <!-- Código del producto (generado aleatoriamente) -->
-                    <td>{{ producto.codigo }}</td>  <!-- Muestra el código del producto -->
-                    <!-- Nombre del producto -->
-                    <td>{{ producto.nombre }}</td>
-                    <!-- Cantidad actual del producto -->
-                    <td>{{ producto.cantidad }}</td>
-                    <!-- Cantidad máxima permitida del producto -->
-                    <td>{{ producto.cantidad_maxima }}</td>
-                    <!-- Estado del producto (lleno o rellenar) -->
-                    <td>{{ producto.estado }}</td>
-                    <!-- Acción para eliminar el producto -->
-                    <td>
-                        <a href="/eliminar/{{ producto.id }}" class="btn btn-danger btn-sm">Eliminar</a>
-                    </td>
-                </tr>
-                {% endfor %}
+            <tbody id="lista-productos">
+                <!-- Los productos se insertarán aquí mediante JavaScript -->
             </tbody>
         </table>
-        <!-- Formulario para agregar un nuevo producto -->
-        <h2 class="mt-5">Agregar Producto</h2>
-        <form action="/agregar" method="POST" class="mt-3">
-            <!-- Campo para ingresar el nombre del nuevo producto -->
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
-            </div>
-            <!-- Campo para ingresar la cantidad del nuevo producto -->
-            <div class="form-group">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" class="form-control" id="cantidad" name="cantidad" required>
-            </div>
-            <!-- Campo para ingresar la cantidad máxima del nuevo producto -->
-            <div class="form-group">
-                <label for="cantidad_maxima">Cantidad Máxima:</label>
-                <input type="number" class="form-control" id="cantidad_maxima" name="cantidad_maxima" required>
-            </div>
-            <!-- Botón para agregar el nuevo producto -->
-            <button type="submit" class="btn btn-primary">Agregar</button>
-        </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
