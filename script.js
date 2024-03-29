@@ -34,6 +34,13 @@ function cargarProductos() {
 };
 
 // script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const loginBtn = document.getElementById('loginBtn');
+    loginBtn.addEventListener('click', function() {
+        login();
+    });
+});
+
 function login() {
     const usuario = document.getElementById('usuario').value;
     const contraseña = document.getElementById('contraseña').value;

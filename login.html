@@ -7,6 +7,14 @@
     <title>Iniciar sesión</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://www.managebac.com/wp-content/uploads/2023/01/Lincoln-School-Hero-scaled.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -24,7 +32,7 @@
                                 <label for="contraseña">Contraseña:</label>
                                 <input type="password" class="form-control" id="contraseña" required>
                             </div>
-                            <button type="button" class="btn btn-primary btn-block" onclick="login()">Iniciar sesión</button>
+                            <button type="button" class="btn btn-primary btn-block" id="loginBtn">Iniciar sesión</button>
                         </form>
                     </div>
                 </div>
