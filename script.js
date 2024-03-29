@@ -1,6 +1,13 @@
-
+// script.js
 document.addEventListener('DOMContentLoaded', function () {
+const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (!isLoggedIn) {
+        // Si no está autenticado, redirige a la página de inicio de sesión
+        window.location.href = 'login.html';
+    } else {
+        // Si está autenticado, carga el inventario
     cargarProductos();
+}
 });
 
 function cargarProductos() {
